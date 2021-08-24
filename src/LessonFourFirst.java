@@ -1,5 +1,12 @@
-import java.util.Locale;
-
+/**
+ * Вывести на экран в одну строку два первых блока по 4 цифры
+ * Вывести на экран номер документа, но блоки из трех букв заменить на (каждая буква заменятся на )
+ * Вывести на экран только одни буквы из номера документа в формате yyy/yyy/y/y в нижнем регистре
+ * Вывести на экран буквы из номера документа в формате "Letters:yyy/yyy/y/y" в верхнем регистре(реализовать с помощью класса StringBuilder)
+ * Проверить содержит ли номер документа последовательность abc и вывети сообщение содержит или нет(причем, abc и ABC считается одинаковой последовательностью).
+ * Проверить начинается ли номер документа с последовательности 555.
+ * Проверить заканчивается ли номер документа на последовательность 1a2b.
+ */
 public class LessonFourFirst {
     public static void main(String[] args) {
         String str = new String("2314-AbС-7462-PkP-4X2X");
@@ -20,20 +27,19 @@ public class LessonFourFirst {
             System.out.println("abc - есть");
         } else if (array[3].toLowerCase().equals("abс")) {
             System.out.println("abc - есть");
-        } else{
+        } else {
             System.out.println("abc - нет");
         }
 
-        if(str.startsWith("555")){
+        if (str.startsWith("555")) {
             System.out.println("Начинается с 555");
-        }
-        else{
+        } else {
             System.out.println("Не начинается с 555");
         }
 
-        if(str.toLowerCase().endsWith("1a2b")){
+        if (str.toLowerCase().endsWith("1a2b")) {
             System.out.println("Заканчивается на 1a2b");
-        }else{
+        } else {
             System.out.println("Не заканчивается на 1a2b");
         }
 
